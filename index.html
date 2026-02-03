@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Love 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f2;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+  }
+
+  h1 {
+    color: #ff0066;
+    margin-top: 50px;
+  }
+
+  .btn-love {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    transition: transform 0.2s;
+    position: relative;
+  }
+
+  .btn-love:hover {
+    transform: scale(1.1);
+  }
+
+  /* Hearts animation */
+  .heart {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: red;
+    transform: rotate(-45deg);
+    animation: float 7s infinite;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .heart::before { top: -10px; left: 0; }
+  .heart::after { left: 10px; top: 0; }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) rotate(-45deg); opacity: 1; }
+    100% { transform: translateY(-100px) rotate(-45deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container text-center">
+  <h1 class="display-3">Hey Love! 💖</h1>
+  <p class="lead mt-3">Do you still want to be my Valentine today? 😘</p>
+  <div class="mt-4">
+    <button id="yesBtn" class="btn btn-love me-3" onclick="window.location.href='valentine.html'">Yes 💖</button>
+    <button id="noBtn" class="btn btn-love">No 😜</button>
+  </div>
+</div>
+
+<script>
+  const noBtn = document.getElementById('noBtn');
+
+  function moveNoButton() {
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+
+    const maxX = window.innerWidth - btnWidth - 10;
+    const maxY = window.innerHeight - btnHeight - 10;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = x + 'px';
+    noBtn.style.top = y + 'px';
+  }
+
+  // Desktop hover
+  noBtn.addEventListener('mouseover', moveNoButton);
+  // Mobile touch
+  noBtn.addEventListener('touchstart', moveNoButton);
+
+  // Floating hearts
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }
+
+  setInterval(createHeart, 500);
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
