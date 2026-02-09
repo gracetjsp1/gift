@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Happy Valentine’s Day! 💖</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fff0f5;
-  color: #ff0066;
-  margin: 0;
-  /* overflow: hidden;  <-- remove this */
-  /* height: 100vh;    <-- remove this */
-  position: relative;
-  padding-bottom: 200px; /* so hearts don’t cover last lines */
-}
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s Day! 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f5;
+      color: #ff0066;
+      margin: 0;
+      /* overflow: hidden;  <-- remove this */
+      /* height: 100vh;    <-- remove this */
+      position: relative;
+      padding-bottom: 200px;
+      /* so hearts don’t cover last lines */
+    }
 
-  h1 {
-    font-size: 4rem;
-    margin-top: 50px;
-  }
+    h1 {
+      font-size: 4rem;
+      margin-top: 50px;
+    }
 
-  p {
-    font-size: 1.5rem;
-    max-width: 700px;
-    margin: 30px auto;
-    line-height: 1.6;
-  }
+    p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 30px auto;
+      line-height: 1.6;
+    }
 
-  .hearts {
-  position: fixed; /* keeps hearts floating above text */
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
+    .hearts {
+      position: fixed;
+      /* keeps hearts floating above text */
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
 
-  /* .heart {
+    /* .heart {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -64,49 +67,56 @@ body {
     0% { transform: translateY(100vh) rotate(-45deg); opacity: 1; }
     100% { transform: translateY(-50px) rotate(-45deg); opacity: 0; }
   } */
-</style>
+  </style>
 </head>
+
 <body>
 
-<div class="hearts" id="heartsContainer"></div>
+  <div class="hearts" id="heartsContainer"></div>
 
-<div class="container text-center">
-  <h1>💖 I Still Love You! 💖</h1>
-  <p>
+  <div class="container text-center">
+    <h1>💖 I Still Love You! 💖</h1>
+    <p>
 
-My suttumani ❤️
-Being with you is my biggest blessing. You’re not just my love — you’re my home 🏡, my strength 💪, my peace, and my best friend 🤍.
+      My suttumani ❤️
+      Being with you is my biggest blessing. You’re not just my love...you’re my home, my strength, my peace, and
+      my best friend 🤍...
 
-We fight, we stumble, we patch things up… but every time, our love grows deeper and stronger than before 💞. Choosing you was the best decision of my life, my precious ondhumkunju 😊.
+      We fight, we stumble, we patch things up… but every time, our love grows deeper and stronger than before 💞.
+      Choosing you was the best decision of my life, my precious ondhumkunju 😊.
 
-You make my everyday so special ✨ — packing my lunch 🍱, massaging my feet 🤍, giving me tight hugs 🤗, waiting for me in the evening 🌆, and making special food just for me 🍲.
+      You make my everyday so special... packing my lunch, massaging my feet 🤍, giving me tight hugs 🤗,
+      waiting for me in the evening, and making special food just for me.The way you served me wasn’t just about
+      food,it felt like you were serving a little piece of your heart, and I loved every second of it.
 
-You never blame me for my mistakes in cooking 🥹❤️. Instead, you enjoy my food so happily — that cute chandhi kulukkam and thalayattal 😄💕 makes my heart melt every time.
-Such small things, but they mean everything to me 💖.
+      You never blame me for my mistakes in cooking 🥹❤️. Instead, you enjoy my food so happily... that cute chandhi
+      kulukkam and thalayattal 😄💕 makes my heart melt every time.
+      Such small things, but they mean everything to me 💖.
 
-Thank you for being my husband and for filling my world with happiness, laughter, and so much love ❤️🥰.
+      Thank you for being my husband and for filling my world with happiness, laughter, and so much love ❤️🥰.
 
-Echubiii… I luboooo you soooo much.. 😘💋
-My suttumaniiiii… ummmaaaaa.. 😘💋💕💕
+      Echubiii… I luboooo you soooo much.. 💕
+      My suttumaniiiii… ummmaaaaa.. 😘
 
-  </p>
-</div>
+    </p>
+  </div>
 
-<script>
-  const container = document.getElementById('heartsContainer');
+  <script>
+    const container = document.getElementById('heartsContainer');
 
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.className = 'heart';
-    heart.style.left = Math.random() * window.innerWidth + 'px';
-    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
-    container.appendChild(heart);
-    setTimeout(() => heart.remove(), 7000);
-  }
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      container.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
 
-  setInterval(createHeart, 300);
-</script>
+    setInterval(createHeart, 300);
+  </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
